@@ -1,0 +1,74 @@
+{
+  "logo": {
+    "sub": "real-time rates"
+  },
+  "nav": {
+    "converter": "Converter",
+    "rates": "Rates",
+    "howItWorks": "How it works",
+    "about": "About"
+  },
+  "hero": {
+    "eyebrow": "7 currencies · live rates",
+    "title": "Convert currencies the simple way",
+    "subBefore": "A personal project built with",
+    "subAfter": ". Real rates."
+  },
+  "converter": {
+    "from": "From",
+    "to": "To",
+    "live": "live",
+    "copy": "Copy result",
+    "copied": "Copied!",
+    "toast": "copied to clipboard",
+    "updatedAgo": "updated {n}s ago"
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "titleBefore": "Simple",
+    "titleEm": "inside",
+    "sub": "Three steps, zero friction.",
+    "step1Num": "01",
+    "step1Title": "Pick your currencies",
+    "step1Desc": "Open the picker and select the source and target currencies. 7 options with flags and names.",
+    "step2Num": "02",
+    "step2Title": "Enter the amount",
+    "step2Desc": "Type any value in the input field. Conversion happens in real time as you type.",
+    "step3Num": "03",
+    "step3Title": "Copy the result",
+    "step3Desc": "The converted value appears on the right side. Click Copy result to save it to your clipboard.",
+    "techTitle": "Under the hood",
+    "techDesc": "A Nuxt server route fetches from AwesomeAPI and normalizes the data. Rates are auto-refreshed every 30 seconds.",
+    "techBadge1": "Nuxt 3",
+    "techBadge2": "AwesomeAPI",
+    "techBadge3": "Auto-refresh 30s"
+  },
+  "rates": {
+    "eyebrow": "Exchange Rates",
+    "title": "Live rates",
+    "sub": "All currencies against the Brazilian Real.",
+    "currency": "Currency",
+    "buy": "Buy",
+    "sell": "Sell",
+    "high": "High",
+    "low": "Low",
+    "change": "Change",
+    "baseLabel": "Base",
+    "baseNote": "Rates against {base} · AwesomeAPI"
+  },
+  "about": {
+    "eyebrow": "About",
+    "titleBefore": "The project",
+    "titleEm": "behind it",
+    "sub": "How it was built and what technologies were used."
+  },
+  "currencies": {
+    "BRL": "Brazilian Real",
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "British Pound",
+    "ARS": "Argentine Peso",
+    "JPY": "Japanese Yen",
+    "PYG": "Paraguayan Guaraní"
+  }
+}

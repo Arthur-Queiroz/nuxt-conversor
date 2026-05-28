@@ -1,0 +1,74 @@
+{
+  "logo": {
+    "sub": "cotações em tempo real"
+  },
+  "nav": {
+    "converter": "Conversor",
+    "rates": "Cotações",
+    "howItWorks": "Como funciona",
+    "about": "Sobre"
+  },
+  "hero": {
+    "eyebrow": "7 moedas com cotações ao vivo",
+    "title": "Converta moedas de um jeito simples",
+    "subBefore": "Um projeto pessoal feito com",
+    "subAfter": ". Cotações reais."
+  },
+  "converter": {
+    "from": "De",
+    "to": "Para",
+    "live": "ao vivo",
+    "copy": "Copiar resultado",
+    "copied": "Copiado!",
+    "toast": "na área de transferência",
+    "updatedAgo": "atualizado há {n}s"
+  },
+  "how": {
+    "eyebrow": "Como funciona",
+    "titleBefore": "Simples",
+    "titleEm": "por dentro",
+    "sub": "Três passos, zero fricção.",
+    "step1Num": "01",
+    "step1Title": "Escolha as moedas",
+    "step1Desc": "Abra o picker e selecione a moeda de origem e destino. São 7 opções com bandeiras e nomes.",
+    "step2Num": "02",
+    "step2Title": "Digite o valor",
+    "step2Desc": "Insira qualquer valor no campo. A conversão acontece em tempo real, conforme você digita.",
+    "step3Num": "03",
+    "step3Title": "Copie o resultado",
+    "step3Desc": "O valor convertido aparece no lado direito. Clique em Copiar resultado para salvar na área de transferência.",
+    "techTitle": "Por baixo dos panos",
+    "techDesc": "Uma rota de servidor Nuxt faz o fetch na AwesomeAPI e normaliza os dados. O resultado é atualizado automaticamente a cada 30 segundos.",
+    "techBadge1": "Nuxt 3",
+    "techBadge2": "AwesomeAPI",
+    "techBadge3": "Auto-refresh 30s"
+  },
+  "rates": {
+    "eyebrow": "Cotações",
+    "title": "Câmbio ao vivo",
+    "sub": "Todas as moedas em relação ao Real Brasileiro.",
+    "currency": "Moeda",
+    "buy": "Compra",
+    "sell": "Venda",
+    "high": "Máxima",
+    "low": "Mínima",
+    "change": "Variação",
+    "baseLabel": "Base",
+    "baseNote": "Cotações em relação ao {base} · AwesomeAPI"
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "titleBefore": "O projeto",
+    "titleEm": "por trás",
+    "sub": "Como foi feito e quais tecnologias foram usadas."
+  },
+  "currencies": {
+    "BRL": "Real Brasileiro",
+    "USD": "Dólar Americano",
+    "EUR": "Euro",
+    "GBP": "Libra Esterlina",
+    "ARS": "Peso Argentino",
+    "JPY": "Iene Japonês",
+    "PYG": "Guarani Paraguaio"
+  }
+}
