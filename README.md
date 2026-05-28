@@ -1,75 +1,76 @@
-# Nuxt Minimal Starter
+# conversor-nuxt
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A real-time currency converter built with Nuxt 3. Fetches live exchange rates from AwesomeAPI and lets you convert between 7 currencies instantly.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- **Live conversion** — rates auto-refresh every 30 seconds
+- **7 currencies** — BRL, USD, EUR, GBP, ARS, JPY, PYG with country flags
+- **Rates table** — dedicated `/cotacoes` page with buy/sell/high/low and % change
+- **Base selector** — compare all currencies against BRL or USD
+- **PT / EN** — bilingual UI, preference persisted in localStorage
+- **No dependencies** — zero third-party UI libraries or i18n packages
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Nuxt 4 (Nuxt 3 compat) |
+| Language | TypeScript |
+| Rates API | [AwesomeAPI](https://docs.awesomeapi.com.br) |
+| Fonts | Instrument Serif · Geist · Caveat (Google Fonts) |
+| Flags | flagcdn.com |
+
+## Getting started
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev       # http://localhost:3000
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm run build     # production build
+npm run preview   # preview production build locally
 ```
 
-## Production
+## Project structure
 
-Build the application for production:
+```
+app/
+├── pages/
+│   ├── index.vue          # converter + how it works + about
+│   └── cotacoes.vue       # live rates table
+├── components/
+│   └── TheNav.vue         # shared navigation
+├── composables/
+│   └── useLocale.ts       # lightweight i18n (no library)
+├── locales/
+│   ├── pt.json
+│   └── en.json
+└── assets/css/
+    └── conversor.css
 
-```bash
-# npm
-npm run build
+server/
+├── api/
+│   └── rates.get.ts       # Nuxt server route
+└── utils/
+    └── awesomeapi.ts      # API client + normalizer
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+public/
+└── flags/
+    └── eu.svg
 ```
 
-Locally preview production build:
+## How rates work
 
-```bash
-# npm
-npm run preview
+The server route (`/api/rates`) fetches from AwesomeAPI and normalizes everything to **"how many BRL per 1 unit of foreign currency"**. The frontend does cross-rate math on the client:
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```
+USD → EUR rate = EUR_bid / USD_bid
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+When base is USD, BRL's high/low are inverted (`1 / usd.low` → BRL high) and pctChange is negated.
+
+## License
+
+MIT
